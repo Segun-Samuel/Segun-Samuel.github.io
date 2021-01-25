@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="Js\menu.js"></script>
+    <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      width: 100vw;
+    }
+    body{
+      overflow-y: hidden;
+      width: 100%;
+      font-size: 13px;
+      font-family: Helvetica, sans-serif;
+      position: relative;
+      min-height:99.67vh;
+    }
+    .header{
+      width: 100%;
+      margin-top: 14px;
+      padding: 0px 10px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .header ul{
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .header ul li{
+      margin-right: 20px;
+    }
+    .header ul li a{
+      text-decoration: none;
+      font-size: 13px;
+      color: #111;
+    }
+    .AppTray{
+      background: #fff;
+      text-align: center;
+      position: absolute;
+      width: 325px;
+      top: 70px;
+      right: 35px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+      height: 440px;
+      overflow-y: auto;
+      padding: 20px;
+      z-index: 1;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: baseline;
+      justify-content: center;
+      visibility: hidden;
+    }
+    .AppTray .app-icon{
+      display: inline-block;
+      width: 33.333%;
+      padding: 8px 8px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .AppTray .app-icon:hover{
+      background: rgba(66,133,244,0.2);
+      border-radius: 5px;
+      border: none;
+    }
+    .app-icon:nth-of-type(3):hover p{
+      white-space: normal;
+    }
+    .AppTray::-webkit-scrollbar{
+      overflow-y: hidden;
+      height: 50%;
+      width: 8px;
+      background: #fff;
+    }
+    .AppTray::-webkit-scrollbar-thumb{
+      background: #eee;
+      border-radius: 15px;
+    }
+
+    .AppTray .app-icon img{
+      width: 40px;
+      height: auto;
+    }
+    .app-icon p{
+      margin-top: 7px;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 70px;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-family: Helvetica, Arial, Calibri, sans-serif;
+      color: rgb(0,0,0);
+      font-weight: 200;
+    }
+    .header button{
+      padding: 7px 14px;
+      border-radius: 2px;
+      font-size: 13px;
+      font-weight: bold;
+      background-color: #4584ef;
+      border: none;
+      color: white;
+    }
+    .header ul li>span img{
+      vertical-align: middle;
+      opacity: 0.5;
+    }
+    .header ul a:hover{
+      color: rgba(0,0,0,0.7);
+      text-decoration: underline;
+    }
+    .header ul img:hover{
+      cursor:pointer;
+      opacity: 1.0;
+    }
+    .content{
+      height: 100vh;
+      min-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .section{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 20px;
+      margin-top: 79px;
+      width: 600px;
+    }
+    .section .maincontent{
+      width: 300px;
+      text-align: center;
+      margin-bottom: 13px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .maincontent img{
+      width: 100%;
+      height: auto;
+    }
+    .maincontent p{
+      font-size: 16px;
+      margin: 0;
+      color: #4285f4;
+      z-index: 2;
+      float: right;
+      transform: translate(-26px, -26px);
+    }
+    .section form{
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+    .section input{
+      min-width: 80%;
+      white-space: nowrap;
+      border: 1px solid #ddd;
+      border-radius: 23px;
+      padding: 14px 69px 14px 40px;
+      outline: none;
+      width: 85%;
+    }
+    .section form .icons{
+      width: 77.5%;
+      display: flex;
+      position: absolute;
+      top: 32%;
+      left: 11%;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+    }
+    .section form input:hover, .section form input:focus{
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+    .icons img:nth-child(2){
+      position: absolute;
+      right: 27px;
+    }
+    .footer{
+      font-family: Arial, sans-serif;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      color: #777;
+      background-color: #f1f1f1;
+    }
+    @media only screen and (max-width: 1000px){
+      .section{
+        width: 600px;
+      }
+      .footer{
+        width: 1000px;
+        position: fixed;
+      }
+      .footer .row2 ul li a{
+        white-space: nowrap;
+      }
+      .AppTray{
+        position: absolute;
+        top: 56px;
+        right: 31px;
+      }
+    }
+    .footer .row{
+      border-top: 1px solid #ddd;
+    }
+    .footer .row2{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer .row1{
+      padding: 11.6px 30px;
+      font-size: 15px;
+    }
+    .footer .row2 ul{
+      padding: 11.6px 28px;
+      font-size: 14px;
+      font-weight: normal;
+      display: flex;
+      list-style: none;
+    }
+    .footer .row2 ul li{
+      margin-right: 28px;
+    }
+    .footer .row2 ul li a{
+      text-decoration: none;
+      color: #777;
+    }
+    .footer .row2 ul:nth-child(2){
+      padding: 11.6px 1px 11.6px 28px;
+    }
+    .footer .row2 ul li a:hover{
+      text-decoration: underline;
+    }
+    #bars{
+      position: absolute;
+      top:50%;
+      transform: translate(20px,-50%);
+      z-index: 1;
+      visibility: hidden;
+    }
+    </style>
+    <title>Image Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!--<h1><span class="blue">G</span><span class="red">O</span><span class="yel">O</span><span class="blue">G</span><span class="green">L</span><span class="red">E</span></h1>-->
+    <div class="content">
+      <div class="header">
+        <ul>
+          <li><!--<i class="fas fa-bars"></i>--><span id="bars" onclick="closeApps()" ><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+          <li><!--<i class="fas fa-bars"></i>--><span id="close-bars" onclick="openApps()"><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+          <li><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/webhp%3Ftab%3Dww&ec=GAZAAQ" ><button type="button">Sign in</button></a></li>
+        </ul>
+        <div class="AppTray" id="Appsblock">
+          <div class="app-icon"><a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=app"><img src="Images and Logos\Picture5.png" style="margin-top: 6px; transform: scale(1.7, 1.7);"></a><p>Account</p></div>
+          <div class="app-icon"><a href="https://www.google.com.ng/webhp?tab=ww"><img src="Images and Logos\Picture2.png"></a><p>Search</p></div>
+          <div class="app-icon"><a href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&authuser=0"><img src="Images and Logos\google-my-business.png"></a><p>My Business</p></div>
+          <div class="app-icon"><a href="https://maps.google.com.ng/maps?hl=en&tab=wl"><img src="Images and Logos\Picture1.png" style="transform: scale(1.3, 1.3);"></a><p>Maps</p></div>
+          <div class="app-icon"><a href="https://www.youtube.com/?gl=NG&tab=w1"><img src="Images and Logos\youtube-clipart-maker-7.png"></a><p>Youtube</p></div>
+          <div class="app-icon"><a href="https://play.google.com/?hl=en&tab=w8"><img src="Images and Logos\Playstore7.png" style="transform: scale(1.4, 1.4);"></a><p>Play</p></div>
+          <div class="app-icon"><a href="https://news.google.com/?tab=wn"><img src="Images and Logos\Google_News_icon.png" style="transform: scale(1.2, 1.2);"></a><p>News</p></div>
+          <div class="app-icon"><a href="https://mail.google.com/mail/?tab=wm"><img src="Images and Logos\Gmail-logo.png" style="transform: scale(1.8, 1.8);"></a><p>Gmail</div>
+          <div class="app-icon"><a href="https://meet.google.com/?hs=197"><img src="Images and Logos\google-meet-logo.png"></a><p>Meet</p></div>
+          <div class="app-icon"><a href="https://contacts.google.com/?hl=en&tab=wC"><img src="Images and Logos\Google_Contacts_logo.png"></a><p>Contacts</p></div>
+          <div class="app-icon"><a href="https://drive.google.com/?tab=wo"><img src="Images and Logos\1200px-Google_Drive_icon_(2020).svg.png"></a><p>Drive</p></div>
+          <div class="app-icon"><a href="https://calendar.google.com/calendar?tab=wc"><img src="Images and Logos\1200px-Google_Calendar_icon_(2020).svg.png" style="transform: scale(0.9, 0.9);"></a><p>Calendar</p></div>
+          <div class="app-icon"><a href="https://translate.google.com.ng/?hl=en&tab=wT"><img src="Images and Logos\Google_Translate_Icon.png"></a><p>Translate</p></div>
+          <div class="app-icon"><a href="https://photos.google.com/?tab=wq&pageId=none"><img src="Images and Logos\1200px-Google_Photos_icon_(2020).svg.png"></a><p>Photos</p></div>
+          <div class="app-icon"><a href="https://duo.google.com/?usp=duo_ald"><img src="Images and Logos\768px-Google_Duo_icon.svg.png"></a><p>Duo</p></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="maincontent">
+          <img src="Images and Logos\google-logo.png" title="Google Images" style="opacity:0.9">
+          <p title="Google Images">images</p>
+        </div>
+        <form action="https://www.google.com.ng/images">
+          <input name="q" type="text">
+          <input type="hidden" name="tbm" value="isch">
+          <div class="icons">
+            <img src="Images and Logos\favpng_magnifying-glass.png" width="16" height="17">
+            <img src="Images and Logos\Cam3.png" width="18" height="auto" style="opacity: 0.7;">
+            <img src="Images and Logos\Copy of mic.png">
+          </div>
+        </form>
+      </div>
+      <div class="footer">
+        <div class="row row1">
+          <p>Nigeria</p>
+        </div>
+        <div class="row row2">
+          <ul>
+            <li><a href="https://www.google.com/intl/en_ng/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+            <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+            <li><a href="https://about.google/?utm_source=google-NG&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a></li>
+            <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://policies.google.com/privacy?hl=en-NG&fg=1">Privacy</a></li>
+            <li><a href="https://policies.google.com/terms?hl=en-NG&fg=1">Terms</a></li>
+            <li><a href="">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

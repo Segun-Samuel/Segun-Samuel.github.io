@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="Js\menu.js"></script>
+    <link rel="stylesheet" href="CSS\Styles.css">
+    <title>Advanced Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9761d2e3c9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="body">
+      <header>
+        <a href="index.html"><img src="Images and Logos\google-logo.png" title="Go to Google Home" class="logo"></a>
+        <ul>
+          <li><span id="bars" onclick="closeApps()" ><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+          <li><span id="close-bars" onclick="openApps()"><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+          <li><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/webhp%3Ftab%3Dww&ec=GAZAAQ"><button type="button">Sign in</button></a></li>
+        </ul>
+        <div class="AppTray" id="Appsblock">
+          <div class="app-icon"><a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=app"><img src="Images and Logos\Picture5.png" style="margin-top: 6px; transform: scale(1.7, 1.7);"></a><p>Account</p></div>
+          <div class="app-icon"><a href="https://www.google.com.ng/webhp?tab=ww"><img src="Images and Logos\Picture2.png"></a><p>Search</p></div>
+          <div class="app-icon"><a href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&authuser=0"><img src="Images and Logos\google-my-business.png"></a><p>My Business</p></div>
+          <div class="app-icon"><a href="https://maps.google.com.ng/maps?hl=en&tab=wl"><img src="Images and Logos\Picture1.png" style="transform: scale(1.3, 1.3);"></a><p>Maps</p></div>
+          <div class="app-icon"><a href="https://www.youtube.com/?gl=NG&tab=w1"><img src="Images and Logos\youtube-clipart-maker-7.png"></a><p>Youtube</p></div>
+          <div class="app-icon"><a href="https://play.google.com/?hl=en&tab=w8"><img src="Images and Logos\Playstore7.png" style="transform: scale(1.4, 1.4);"></a><p>Play</p></div>
+          <div class="app-icon"><a href="https://news.google.com/?tab=wn"><img src="Images and Logos\Google_News_icon.png" style="transform: scale(1.2, 1.2);"></a><p>News</p></div>
+          <div class="app-icon"><a href="https://mail.google.com/mail/?tab=wm"><img src="Images and Logos\Gmail-logo.png" style="transform: scale(1.8, 1.8);"></a><p>Gmail</div>
+          <div class="app-icon"><a href="https://meet.google.com/?hs=197"><img src="Images and Logos\google-meet-logo.png"></a><p>Meet</p></div>
+          <div class="app-icon"><a href="https://contacts.google.com/?hl=en&tab=wC"><img src="Images and Logos\Google_Contacts_logo.png"></a><p>Contacts</p></div>
+          <div class="app-icon"><a href="https://drive.google.com/?tab=wo"><img src="Images and Logos\1200px-Google_Drive_icon_(2020).svg.png"></a><p>Drive</p></div>
+          <div class="app-icon"><a href="https://calendar.google.com/calendar?tab=wc"><img src="Images and Logos\1200px-Google_Calendar_icon_(2020).svg.png" style="transform: scale(0.9, 0.9);"></a><p>Calendar</p></div>
+          <div class="app-icon"><a href="https://translate.google.com.ng/?hl=en&tab=wT"><img src="Images and Logos\Google_Translate_Icon.png"></a><p>Translate</p></div>
+          <div class="app-icon"><a href="https://photos.google.com/?tab=wq&pageId=none"><img src="Images and Logos\1200px-Google_Photos_icon_(2020).svg.png"></a><p>Photos</p></div>
+          <div class="app-icon"><a href="https://duo.google.com/?usp=duo_ald"><img src="Images and Logos\768px-Google_Duo_icon.svg.png"></a><p>Duo</p></div>
+        </div>
+      </header>
+      <section>
+        <div class="header">
+          <p>Advanced Search</p>
+        </div>
+        <div class="content">
+          <div class="col c1">
+            <p>Find pages with...</p>
+            <p><label for="alt1">all these words:</label></p>
+            <p><label for="alt2">this exact word or phrase:</label></p>
+            <p><label for="alt3">any of these words:</label></p>
+            <p><label for="alt4">none of these words:</label></p>
+            <p><label for="alt5">numbers ranging from:</label></p>
+          </div>
+          <form class="col c2" action="https://www.google.com/search">
+            <pre> </pre>
+            <input type="text" name="as_q" id="alt1">
+            <input type="text" name="as_epq" id="alt2">
+            <input type="text" name="as_oq" id="alt3">
+            <input type="text" name="as_eq" id="alt4">
+            <div><input type="text" name="as_nlo" id="alt5"><span>to</span><input type="text" name="as_nhi"></div>
+            <input class="search" type="submit" value="Advanced Search">
+          </form>
+          <div class="col c3">
+            <p>To do this in the search box.</p>
+            <p>Type the important words: <span>tri-colour rat terrier</span></p>
+            <p>Put exact words in quotes: <span>"rat terrier"</span></p>
+            <p>Type OR between all the words you want: <span>miniature OR standard</span></p>
+            <p>Put a minus sign just before words that you don't want: <span>-rodent, -"Jack Russell"</span></p>
+            <p>Put two full stops between the numbers and add a unit of measurement: <span>10..35 kg, £300..£500, 2010..2011</span></p>
+          </div>
+        </div>
+        <footer class="optional">
+          <p>You can also...</p>
+          <ul>
+            <li><a href="https://support.google.com/websearch?p=adv_pages_similar&hl=en">Find pages that are similar to a URL</a></li>
+            <li><a href="https://support.google.com/websearch?p=adv_pages_visited&hl=en">Search pages that you've visited</a></li>
+            <li><a href="https://support.google.com/websearch?p=adv_operators&hl=en">Use operators in the search box</a></li>
+            <li><a href="https://www.google.com/preferences?hl=en-NG">Customise your search settings</a></li>
+          </ul>
+        </footer>
+      </section>
+      <footer>
+        <div class="row row1">
+          <p>Nigeria</p>
+        </div>
+        <div class="row row2">
+          <ul>
+            <li><a href="https://support.google.com/websearch/?p=ws_results_help&hl=en-NG&fg=1">Help</a></li>
+            <li><a href="https://policies.google.com/privacy?hl=en-NG&fg=1">Privacy</a></li>
+            <li><a href="https://policies.google.com/terms?hl=en-NG&fg=1">Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+  </body>
+</html>

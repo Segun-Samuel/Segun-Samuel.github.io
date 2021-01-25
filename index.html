@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="Js\menu.js"></script>
+    <link rel="stylesheet" href="CSS\newstyle.css">
+    <title>Google</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9761d2e3c9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="body">
+      <header>
+          <ul>
+            <li><a href="AdvancedSearch.html">Advanced</a></li>
+            <li><a href="ImageSearch.html">Images</a></li>
+            <li><span id="bars" onclick="closeApps()" ><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+            <li><span id="close-bars" onclick="openApps()"><img src="Images and Logos\Copy of bars.png" title="Google apps"></span></li>
+            <li><a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/webhp%3Ftab%3Dww&ec=GAZAAQ"><button type="button">Sign in</button></a></li>
+          </ul>
+          <div class="AppTray" id="Appsblock">
+            <div class="app-icon"><a href="https://myaccount.google.com/?utm_source=OGB&tab=wk&utm_medium=app"><img src="Images and Logos\Picture5.png" style="margin-top: 6px; transform: scale(1.7, 1.7);"></a><p>Account</p></div>
+            <div class="app-icon"><a href="https://www.google.com.ng/webhp?tab=ww"><img src="Images and Logos\Picture2.png"></a><p>Search</p></div>
+            <div class="app-icon"><a href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u&authuser=0"><img src="Images and Logos\google-my-business.png"></a><p>My Business</p></div>
+            <div class="app-icon"><a href="https://maps.google.com.ng/maps?hl=en&tab=wl"><img src="Images and Logos\Picture1.png" style="transform: scale(1.3, 1.3);"></a><p>Maps</p></div>
+            <div class="app-icon"><a href="https://www.youtube.com/?gl=NG&tab=w1"><img src="Images and Logos\youtube-clipart-maker-7.png"></a><p>Youtube</p></div>
+            <div class="app-icon"><a href="https://play.google.com/?hl=en&tab=w8"><img src="Images and Logos\Playstore7.png" style="transform: scale(1.4, 1.4);"></a><p>Play</p></div>
+            <div class="app-icon"><a href="https://news.google.com/?tab=wn"><img src="Images and Logos\Google_News_icon.png" style="transform: scale(1.2, 1.2);"></a><p>News</p></div>
+            <div class="app-icon"><a href="https://mail.google.com/mail/?tab=wm"><img src="Images and Logos\Gmail-logo.png" style="transform: scale(1.8, 1.8);"></a><p>Gmail</div>
+            <div class="app-icon"><a href="https://meet.google.com/?hs=197"><img src="Images and Logos\google-meet-logo.png"></a><p>Meet</p></div>
+            <div class="app-icon"><a href="https://contacts.google.com/?hl=en&tab=wC"><img src="Images and Logos\Google_Contacts_logo.png"></a><p>Contacts</p></div>
+            <div class="app-icon"><a href="https://drive.google.com/?tab=wo"><img src="Images and Logos\1200px-Google_Drive_icon_(2020).svg.png"></a><p>Drive</p></div>
+            <div class="app-icon"><a href="https://calendar.google.com/calendar?tab=wc"><img src="Images and Logos\1200px-Google_Calendar_icon_(2020).svg.png" style="transform: scale(0.9, 0.9);"></a><p>Calendar</p></div>
+            <div class="app-icon"><a href="https://translate.google.com.ng/?hl=en&tab=wT"><img src="Images and Logos\Google_Translate_Icon.png"></a><p>Translate</p></div>
+            <div class="app-icon"><a href="https://photos.google.com/?tab=wq&pageId=none"><img src="Images and Logos\1200px-Google_Photos_icon_(2020).svg.png"></a><p>Photos</p></div>
+            <div class="app-icon"><a href="https://duo.google.com/?usp=duo_ald"><img src="Images and Logos\768px-Google_Duo_icon.svg.png"></a><p>Duo</p></div>
+          </div>
+      </header>
+      <section class="main">
+        <div class="imagelinks">
+          <a href="q=https://www.google.com/search?q=December+global+holidays&oi=ddle&ct=173710363&hl=en&kgmid=ddl&sa=X&ved=0ahUKEwjwtbKo29ztAhWwz4UKHbFJB1IQPQgM&biw=1280&bih=646&dpr=1.5"><img src="Images and Logos\december-holidays-days-2-30-6753651837108830.3-law.gif" title="December Holidays"></a>
+          <a href=""><img src="Images and Logos\download.png" title="Share"></a>
+        </div>
+        <div class="searchbox">
+          <form id="indexform" action="https://www.google.com/search" method="get">
+            <input type="text" name="q" size="34" maxlength="700" title="Search">
+          </form>
+          <div class="icons">
+            <img src="Images and Logos\favpng_magnifying-glass.png" >
+            <a href=""><img  style="width: 13px; height: auto; opacity: 1.0;pointer-events: auto;" src="Images and Logos\Copy of mic.png" title="Search by voice"></a>
+          </div>
+        </div>
+        <div class="buttons">
+          <input form="indexform" type="submit" value="Google Search" name="btnK">
+          <input form="indexform" type="submit" value="I'm Feeling Lucky" name="btnI">
+        </div>
+        <div class="languages">
+          <p>Google offered in:</p>
+          <ul>
+            <li><a href="">Hausa</a></li>
+            <li><a href="">Igbo</a></li>
+            <li><a href="">Èdè Yorùbá</a></li>
+            <li><a href="">Nigerian Pidgin</a></li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <div class="row row1">
+          <p>Nigeria</p>
+        </div>
+        <div class="row row2">
+          <ul>
+            <li><a href="https://www.google.com/intl/en_ng/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+            <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a></li>
+            <li><a href="https://about.google/?utm_source=google-NG&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a></li>
+            <li><a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://policies.google.com/privacy?hl=en-NG&fg=1">Privacy</a></li>
+            <li><a href="https://policies.google.com/terms?hl=en-NG&fg=1">Terms</a></li>
+            <li><a href="">Settings</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
