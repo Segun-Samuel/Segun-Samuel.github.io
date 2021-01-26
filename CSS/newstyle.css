@@ -193,10 +193,10 @@ section .imagelinks a:nth-child(2){
 }
 @media only screen and (max-width: 400px){
   section{
-    width: 400px;
+    width: 350px;
   }
   .imagelinks>a:first-child img{
-    width: 360px;
+    width: 300px;
   }
 }
 section .searchbox{
