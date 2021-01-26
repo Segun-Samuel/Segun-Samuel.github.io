@@ -286,6 +286,10 @@ footer .row{
   border-top: 1px solid #ddd;
   background-color: #f1f1f1;
 }
+footer.last-footer{
+  position: relative;
+  bottom: 0;
+}
 footer .row ul{
   display: flex;
   list-style: none;
