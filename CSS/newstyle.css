@@ -160,7 +160,6 @@ section.main{
   align-items: center;
   margin-top: 20px;
   width: 50%;
-  border: 1px solid red;
   min-width: 520px;
 }
 section .imagelinks{
@@ -187,7 +186,6 @@ section .imagelinks a:nth-child(2){
     flex-flow: column nowrap;
   }
 }
-
 @media only screen and (max-width: 520px){
   .imagelinks>a:first-child img{
     width: 480px;
