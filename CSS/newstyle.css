@@ -19,7 +19,7 @@ body{
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 header{
@@ -153,12 +153,15 @@ header ul img:hover{
   opacity: 1.0;
 }
 section.main{
+  margin-bottom: 210px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   width: 50%;
+  border: 1px solid red;
+  min-width: 520px;
 }
 section .imagelinks{
   position: relative;
@@ -166,11 +169,36 @@ section .imagelinks{
   justify-content: center;
   align-items: center;
 }
+
 section .imagelinks a:nth-child(2){
   position: absolute;
   right: 4.2%;
   top: 78%;
   opacity: 0.8;
+}
+@media only screen and (max-width: 1170px){
+  .searchbox{
+    min-width: 96%;
+  }
+}
+@media only screen and (max-width: 700px){
+  footer .row2{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .imagelinks>a:first-child img{
+    width: 480px;
+  }
+}
+@media only screen and (max-width: 400px){
+  section{
+  }
+  .imagelinks>a:first-child img{
+    width: 360px;
+  }
 }
 section .searchbox{
   margin-top: 23px;
